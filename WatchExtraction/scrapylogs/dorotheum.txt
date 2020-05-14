@@ -1,0 +1,50 @@
+
+2020-05-01 14:58:34 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/4058/
+2020-05-01 14:58:34 [root] WARNING: DorotheumSpider; msg=Total Lots: 258;url= https://www.dorotheum.com/en/a/4058/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3890/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Total Lots: 192;url= https://www.dorotheum.com/en/a/3890/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3671/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Total Lots: 228;url= https://www.dorotheum.com/en/a/3671/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3839/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Total Lots: 182;url= https://www.dorotheum.com/en/a/3839/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3551/
+2020-05-01 14:58:35 [root] WARNING: DorotheumSpider; msg=Total Lots: 357;url= https://www.dorotheum.com/en/a/3551/
+2020-05-01 14:58:36 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3071/
+2020-05-01 14:58:36 [root] WARNING: DorotheumSpider; msg=Total Lots: 193;url= https://www.dorotheum.com/en/a/3071/
+2020-05-01 14:58:36 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2960/
+2020-05-01 14:58:36 [root] WARNING: DorotheumSpider; msg=Total Lots: 268;url= https://www.dorotheum.com/en/a/2960/
+2020-05-01 14:58:36 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2744/
+2020-05-01 14:58:37 [root] WARNING: DorotheumSpider; msg=Total Lots: 264;url= https://www.dorotheum.com/en/a/2744/
+2020-05-01 14:58:43 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3449/
+2020-05-01 14:58:43 [root] WARNING: DorotheumSpider; msg=Total Lots: 268;url= https://www.dorotheum.com/en/a/3449/
+2020-05-01 14:58:43 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3239/
+2020-05-01 14:58:43 [root] WARNING: DorotheumSpider; msg=Total Lots: 267;url= https://www.dorotheum.com/en/a/3239/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3434/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Total Lots: 257;url= https://www.dorotheum.com/en/a/3434/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3230/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Total Lots: 280;url= https://www.dorotheum.com/en/a/3230/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2837/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Total Lots: 235;url= https://www.dorotheum.com/en/a/2837/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2576/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Total Lots: 210;url= https://www.dorotheum.com/en/a/2576/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2969/
+2020-05-01 14:58:44 [root] WARNING: DorotheumSpider; msg=Total Lots: 279;url= https://www.dorotheum.com/en/a/2969/
+2020-05-01 14:58:46 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2657/
+2020-05-01 14:58:46 [root] WARNING: DorotheumSpider; msg=Total Lots: 247;url= https://www.dorotheum.com/en/a/2657/
+2020-05-01 14:58:46 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/3338/
+2020-05-01 14:58:46 [root] WARNING: DorotheumSpider; msg=Total Lots: 377;url= https://www.dorotheum.com/en/a/3338/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2384/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 261;url= https://www.dorotheum.com/en/a/2384/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2288/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 241;url= https://www.dorotheum.com/en/a/2288/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2159/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 240;url= https://www.dorotheum.com/en/a/2159/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2039/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 244;url= https://www.dorotheum.com/en/a/2039/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/1895/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 258;url= https://www.dorotheum.com/en/a/1895/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2045/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 268;url= https://www.dorotheum.com/en/a/2045/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Spider started;url= https://www.dorotheum.com/en/a/2042/
+2020-05-01 16:50:04 [root] WARNING: DorotheumSpider; msg=Total Lots: 362;url= https://www.dorotheum.com/en/a/2042/
+2020-05-01 17:31:48 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;

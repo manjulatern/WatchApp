@@ -1,0 +1,79 @@
+
+2020-05-01 20:26:37 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24052/
+2020-05-01 20:26:37 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/16793/
+2020-05-01 20:26:39 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13553/
+2020-05-01 20:26:40 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25397/
+2020-05-01 20:26:41 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24628/
+2020-05-01 20:26:45 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25730/
+2020-05-01 20:26:47 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24051/
+2020-05-01 20:26:48 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14010/
+2020-05-01 20:26:51 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/23798/
+2020-05-01 20:26:52 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25582/
+2020-05-01 20:26:52 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/11837/
+2020-05-01 20:26:52 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14934/
+2020-05-01 20:26:52 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/23798/
+2020-05-01 20:26:52 [root] ERROR: WatchExtraction; msg=Processing Failed > 'job'; url= https://www.bonhams.com/auctions/23798/
+2020-05-01 20:26:52 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://www.bonhams.com/auctions/23798/; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 32, in process_item
+    self.job = item["job"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'job'
+
+2020-05-01 20:26:52 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/20979/
+2020-05-01 20:26:56 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13587/
+2020-05-01 20:26:57 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/16751/
+2020-05-01 20:27:00 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13933/
+2020-05-01 20:27:01 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/16109/
+2020-05-01 20:27:04 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14225/
+2020-05-01 20:27:06 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/16153/
+2020-05-01 20:27:08 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14002/
+2020-05-01 20:27:11 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15840/
+2020-05-01 20:27:12 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13828/
+2020-05-01 20:27:15 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15422/
+2020-05-01 20:27:17 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/11951/
+2020-05-01 20:27:19 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15719/
+2020-05-01 20:27:23 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/18621/
+2020-05-01 20:27:23 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15775/
+2020-05-01 20:27:27 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/18311/
+2020-05-01 20:27:31 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/18266/
+2020-05-01 20:27:34 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25396/
+2020-05-01 20:27:36 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/17800/
+2020-05-01 20:27:40 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/17752/
+2020-05-01 20:27:40 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25281/
+2020-05-01 20:27:45 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/17699/
+2020-05-01 20:27:46 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25395/
+2020-05-01 20:27:47 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/11800/
+2020-05-01 20:27:49 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/16882/
+2020-05-01 20:27:52 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/11757/
+2020-05-01 20:27:53 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/16834/
+2020-05-01 20:27:53 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25394/
+2020-05-01 20:27:56 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/11949/
+2020-05-01 20:27:59 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24632/
+2020-05-01 20:28:00 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/11722/
+2020-05-01 20:28:01 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15517/
+2020-05-01 20:28:04 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24630/
+2020-05-01 20:28:04 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13140/
+2020-05-01 20:28:05 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15110/
+2020-05-01 20:28:10 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25530/
+2020-05-01 20:28:10 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/15217/
+2020-05-01 20:28:13 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/25224/
+2020-05-01 20:28:13 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14226/
+2020-05-01 20:28:17 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13636/
+2020-05-01 20:28:21 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14558/
+2020-05-01 20:28:24 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/13615/
+2020-05-01 20:28:28 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/14463/
+2020-05-01 20:28:45 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/17110/
+2020-05-01 20:30:01 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24629/
+2020-05-01 20:30:07 [root] WARNING: BonhamsSpider; msg=Spider started;url= https://www.bonhams.com/auctions/24631/
+2020-05-01 20:39:13 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/13587/
+2020-05-01 21:08:58 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/23861/
+2020-05-01 23:11:04 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/13140/
+2020-05-01 23:15:17 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/15110/
+2020-05-02 00:38:41 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/13828/
+2020-05-02 01:05:50 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;
+2020-05-02 01:54:07 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/16882/
+2020-05-02 02:00:50 [root] ERROR: BonhamsSpider; msg=Crawling Failed > list index out of range ;url= https://www.bonhams.com/auctions/13615/
+2020-05-02 02:20:34 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;
+2020-05-02 02:36:53 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;
+2020-05-02 02:42:47 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;

@@ -1,0 +1,22 @@
+
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Total Lots : 120 ;url= https://www.bukowskis.com/en/auctions/618/lots
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Total Lots : 158 ;url= https://www.bukowskis.com/en/auctions/600/lots
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Total Lots : 98 ;url= https://www.bukowskis.com/en/auctions/607/lots
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Total Lots : 109 ;url= https://www.bukowskis.com/en/auctions/610/lots
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Total Lots : 157 ;url= https://www.bukowskis.com/en/auctions/595/lots
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Total Lots : 97 ;url= https://www.bukowskis.com/en/auctions/614/lots
+2020-04-26 22:07:01 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/618/lots/page/3
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/600/lots/page/3
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/618/lots/page/2
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/610/lots/page/3
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/618/lots/page/1
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/600/lots/page/1
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/610/lots/page/2
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/607/lots/page/1
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/600/lots/page/2
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/595/lots/page/3
+2020-04-26 22:07:02 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/595/lots/page/1
+2020-04-26 22:07:03 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/610/lots/page/1
+2020-04-26 22:07:03 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/614/lots/page/1
+2020-04-26 22:07:03 [root] WARNING: BukowskisSpider; msg=Spider started;url= https://www.bukowskis.com/en/auctions/595/lots/page/2
+2020-04-26 22:07:32 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;

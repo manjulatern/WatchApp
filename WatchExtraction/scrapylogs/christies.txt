@@ -1,0 +1,4 @@
+
+2020-05-01 20:23:27 [root] WARNING: ChristiesSpider; msg=Spider started;url= https://www.christies.com/Important-Watches--The-25019.aspx?lid=1
+2020-05-01 20:23:39 [root] WARNING: ChristiesSpider; msg=Total Lots: 118;url= https://www.christies.com/Important-Watches--The-25019.aspx?lid=1
+2020-05-01 20:29:37 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;

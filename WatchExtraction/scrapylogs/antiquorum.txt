@@ -1,0 +1,18 @@
+
+2020-05-01 20:28:44 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/hong-kong-the-ritz-carlton-hotel-harbour-room-3rd-floor-2007-06-02/lots
+2020-05-01 20:28:44 [root] WARNING: AntiquorumSpider; Total Pages = 17 ; URL: https://catalog.antiquorum.swiss/en/auctions/hong-kong-the-ritz-carlton-hotel-harbour-room-3rd-floor-2007-06-02/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/geneva-hotel-noga-hilton-2005-10-16/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 19 ; URL: https://catalog.antiquorum.swiss/en/auctions/geneva-hotel-noga-hilton-2005-10-16/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2007-05-13/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 35 ; URL: https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2007-05-13/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/hong-kong-the-ritz-carlton-hotel-harbour-room-3rd-floor-2006-11-25/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 11 ; URL: https://catalog.antiquorum.swiss/en/auctions/hong-kong-the-ritz-carlton-hotel-harbour-room-3rd-floor-2006-11-25/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/geneva-hotel-du-rhone-2006-04-02/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 11 ; URL: https://catalog.antiquorum.swiss/en/auctions/geneva-hotel-du-rhone-2006-04-02/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2006-11-12/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 19 ; URL: https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2006-11-12/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2007-04-15/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 15 ; URL: https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2007-04-15/lots;
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; msg=Spider started;url= https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2006-10-15/lots
+2020-05-01 20:28:45 [root] WARNING: AntiquorumSpider; Total Pages = 22 ; URL: https://catalog.antiquorum.swiss/en/auctions/geneva-mandarin-oriental-hotel-du-rhone-2006-10-15/lots;
+2020-05-01 21:43:07 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;

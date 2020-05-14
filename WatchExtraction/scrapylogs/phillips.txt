@@ -1,0 +1,19 @@
+
+2020-04-27 03:21:40 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/HK080316
+2020-04-27 03:21:40 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080317
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/NY080117
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/HK080217
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080217
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080216
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080116
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080117
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080016
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/HK080216
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080415
+2020-04-27 03:21:41 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/HK080117
+2020-04-27 03:21:42 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080115
+2020-04-27 03:21:42 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080215
+2020-04-27 03:21:42 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/CH080515
+2020-04-27 03:21:42 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/HK080116
+2020-04-27 03:21:42 [root] WARNING: PhillipsSpider; msg=Spider started;url= https://www.phillips.com/auctions/auction/HK080115
+2020-04-27 03:29:54 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;

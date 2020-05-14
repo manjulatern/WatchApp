@@ -1,0 +1,267 @@
+
+2020-05-01 20:22:42 [root] WARNING: HeritageSpider; msg=Spider started;url= https://jewelry.ha.com/c/search.zx?saleNo=662
+2020-05-01 20:22:49 [root] WARNING: HeritageSpider; msg=Total Lots: 301;url= https://jewelry.ha.com/c/search.zx?saleNo=662
+2020-05-01 20:22:51 [root] WARNING: HeritageSpider; msg=Spider started;url= https://jewelry.ha.com/c/search.zx?saleNo=646
+2020-05-01 20:23:01 [root] WARNING: HeritageSpider; msg=Total Lots: 445;url= https://jewelry.ha.com/c/search.zx?saleNo=646
+2020-05-01 20:23:34 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'NoneType' object is not subscriptable;url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-platinum-white-gold-necklace-the-necklace-is-composed-of-cultured-pearls-measuring-850-900/a/646-39767.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:23:34 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-platinum-white-gold-necklace-the-necklace-is-composed-of-cultured-pearls-measuring-850-900/a/646-39767.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 131, in parseBS
+    images_links.append(soup.find('img', {'class': 'ls-is-cached lazyloaded'})["src"])
+TypeError: 'NoneType' object is not subscriptable
+
+2020-05-01 20:23:45 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-platinum-white-gold-necklace-the-necklace-is-composed-of-cultured-pearls-measuring-850-900/a/646-39767.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:23:45 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-platinum-white-gold-necklace-the-necklace-is-composed-of-cultured-pearls-measuring-850-900/a/646-39767.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:24:43 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'NoneType' object is not subscriptable;url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-ring-whitehouse-bros-the-ring-features-a-european-cut-diamond-measuring-785-x-775-x-500-m/a/646-39583.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:24:43 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-ring-whitehouse-bros-the-ring-features-a-european-cut-diamond-measuring-785-x-775-x-500-m/a/646-39583.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 131, in parseBS
+    images_links.append(soup.find('img', {'class': 'ls-is-cached lazyloaded'})["src"])
+TypeError: 'NoneType' object is not subscriptable
+
+2020-05-01 20:24:47 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-ring-whitehouse-bros-the-ring-features-a-european-cut-diamond-measuring-785-x-775-x-500-m/a/646-39583.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:24:47 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-ring-whitehouse-bros-the-ring-features-a-european-cut-diamond-measuring-785-x-775-x-500-m/a/646-39583.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:25:21 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'NoneType' object is not subscriptable;url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-lorgnette-tiffany-and-co-the-hinged-and-spring-loaded-lorgnette-opens-to-reveal-two-rectangula/a/646-39282.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:25:21 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-lorgnette-tiffany-and-co-the-hinged-and-spring-loaded-lorgnette-opens-to-reveal-two-rectangula/a/646-39282.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 131, in parseBS
+    images_links.append(soup.find('img', {'class': 'ls-is-cached lazyloaded'})["src"])
+TypeError: 'NoneType' object is not subscriptable
+
+2020-05-01 20:25:25 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-lorgnette-tiffany-and-co-the-hinged-and-spring-loaded-lorgnette-opens-to-reveal-two-rectangula/a/646-39282.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:25:25 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/art-deco-diamond-platinum-lorgnette-tiffany-and-co-the-hinged-and-spring-loaded-lorgnette-opens-to-reveal-two-rectangula/a/646-39282.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:25:56 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'NoneType' object is not subscriptable;url= https://jewelry.ha.com/itm/timepieces/cartier-lady-s-diamond-gold-integral-bracelet-wristwatch-modern-case-20-mm-18k-yellow-gold-solid-lugs-case-and-bez/a/646-39134.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:25:56 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/timepieces/cartier-lady-s-diamond-gold-integral-bracelet-wristwatch-modern-case-20-mm-18k-yellow-gold-solid-lugs-case-and-bez/a/646-39134.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 131, in parseBS
+    images_links.append(soup.find('img', {'class': 'ls-is-cached lazyloaded'})["src"])
+TypeError: 'NoneType' object is not subscriptable
+
+2020-05-01 20:26:00 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/timepieces/cartier-lady-s-diamond-gold-integral-bracelet-wristwatch-modern-case-20-mm-18k-yellow-gold-solid-lugs-case-and-bez/a/646-39134.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:26:00 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/timepieces/cartier-lady-s-diamond-gold-integral-bracelet-wristwatch-modern-case-20-mm-18k-yellow-gold-solid-lugs-case-and-bez/a/646-39134.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:26:26 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'NoneType' object is not subscriptable;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-platinum-brooch-the-oversized-bow-brooch-complete-with-articulated-ribbon-end-features-full-cut-diamonds-weigh/a/646-39571.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:26:26 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-platinum-brooch-the-oversized-bow-brooch-complete-with-articulated-ribbon-end-features-full-cut-diamonds-weigh/a/646-39571.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 131, in parseBS
+    images_links.append(soup.find('img', {'class': 'ls-is-cached lazyloaded'})["src"])
+TypeError: 'NoneType' object is not subscriptable
+
+2020-05-01 20:26:30 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-platinum-brooch-the-oversized-bow-brooch-complete-with-articulated-ribbon-end-features-full-cut-diamonds-weigh/a/646-39571.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:26:30 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-platinum-brooch-the-oversized-bow-brooch-complete-with-articulated-ribbon-end-features-full-cut-diamonds-weigh/a/646-39571.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:32:21 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'NoneType' object is not subscriptable;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-tsavorite-garnet-south-sea-cultured-pearl-gold-earrings-lunia-each-earring-features-full-cut-diamonds-enhanc/a/662-39309.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:32:21 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-tsavorite-garnet-south-sea-cultured-pearl-gold-earrings-lunia-each-earring-features-full-cut-diamonds-enhanc/a/662-39309.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 131, in parseBS
+    images_links.append(soup.find('img', {'class': 'ls-is-cached lazyloaded'})["src"])
+TypeError: 'NoneType' object is not subscriptable
+
+2020-05-01 20:32:25 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-tsavorite-garnet-south-sea-cultured-pearl-gold-earrings-lunia-each-earring-features-full-cut-diamonds-enhanc/a/662-39309.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:32:25 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-tsavorite-garnet-south-sea-cultured-pearl-gold-earrings-lunia-each-earring-features-full-cut-diamonds-enhanc/a/662-39309.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:32:39 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'data-src';url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:32:39 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 129, in parseBS
+    images_links.append(image['data-src'])
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/bs4/element.py", line 1368, in __getitem__
+    return self.attrs[key]
+KeyError: 'data-src'
+
+2020-05-01 20:32:44 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:32:44 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:37:22 [root] ERROR: HeritageSpider; msg=Crawling Failed > Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+;url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-white-gold-earrings-each-starburst-earring-features-a-cultured-pearl-measuring-approximately-80/a/662-39188.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:37:22 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-white-gold-earrings-each-starburst-earring-features-a-cultured-pearl-measuring-approximately-80/a/662-39188.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 99, in parseBS
+    browser.get(url)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+
+
+2020-05-01 20:37:23 [root] ERROR: HeritageSpider; msg=Crawling Failed > Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+;url= https://jewelry.ha.com/itm/estate-jewelry/multi-stone-cultured-pearl-gold-pendant-brooch-designed-as-a-vase-filled-with-flowers-the-pendant-brooch-features-an-o/a/662-39302.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:37:23 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/multi-stone-cultured-pearl-gold-pendant-brooch-designed-as-a-vase-filled-with-flowers-the-pendant-brooch-features-an-o/a/662-39302.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 99, in parseBS
+    browser.get(url)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+
+
+2020-05-01 20:37:25 [root] ERROR: WatchExtraction; msg=Processing Failed > 'lot'; url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-white-gold-earrings-each-starburst-earring-features-a-cultured-pearl-measuring-approximately-80/a/662-39188.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:37:25 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/cultured-pearl-diamond-white-gold-earrings-each-starburst-earring-features-a-cultured-pearl-measuring-approximately-80/a/662-39188.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 62, in process_item
+    lot.lot_number = item["lot"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'lot'
+
+2020-05-01 20:37:26 [root] ERROR: WatchExtraction; msg=Processing Failed > 'lot'; url= https://jewelry.ha.com/itm/estate-jewelry/multi-stone-cultured-pearl-gold-pendant-brooch-designed-as-a-vase-filled-with-flowers-the-pendant-brooch-features-an-o/a/662-39302.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:37:26 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/multi-stone-cultured-pearl-gold-pendant-brooch-designed-as-a-vase-filled-with-flowers-the-pendant-brooch-features-an-o/a/662-39302.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 62, in process_item
+    lot.lot_number = item["lot"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'lot'
+
+2020-05-01 20:37:26 [root] ERROR: HeritageSpider; msg=Crawling Failed > Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:37:26 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 99, in parseBS
+    browser.get(url)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+
+
+2020-05-01 20:37:27 [root] ERROR: WatchExtraction; msg=Processing Failed > 'lot'; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:37:27 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 62, in process_item
+    lot.lot_number = item["lot"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'lot'
+
+2020-05-01 20:37:27 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;
+2020-05-01 20:42:32 [root] ERROR: HeritageSpider; msg=Crawling Failed > 'data-src';url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:42:32 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 129, in parseBS
+    images_links.append(image['data-src'])
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/bs4/element.py", line 1368, in __getitem__
+    return self.attrs[key]
+KeyError: 'data-src'
+
+2020-05-01 20:42:36 [root] ERROR: WatchExtraction; msg=Processing Failed > 'title'; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:42:36 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 63, in process_item
+    lot.title = item["title"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'title'
+
+2020-05-01 20:43:59 [root] ERROR: HeritageSpider; msg=Crawling Failed > Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+;url= https://jewelry.ha.com/itm/estate-jewelry/ruby-diamond-gold-earrings-each-features-oval-shaped-rubies-measuring-approximately-400-x-300-mm-enhanced-by-europea/a/646-39394.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:43:59 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/ruby-diamond-gold-earrings-each-features-oval-shaped-rubies-measuring-approximately-400-x-300-mm-enhanced-by-europea/a/646-39394.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 99, in parseBS
+    browser.get(url)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+
+
+2020-05-01 20:44:01 [root] ERROR: HeritageSpider; msg=Crawling Failed > Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+;url= https://jewelry.ha.com/itm/estate-jewelry/peridot-diamond-gold-brooch-the-brooch-designed-as-a-four-leaf-clover-features-heart-shaped-peridot-measuring-approxi/a/646-39425.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:44:01 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/peridot-diamond-gold-brooch-the-brooch-designed-as-a-four-leaf-clover-features-heart-shaped-peridot-measuring-approxi/a/646-39425.s?ic4=GalleryView-ShortDescription-071515;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 99, in parseBS
+    browser.get(url)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+
+
+2020-05-01 20:44:02 [root] ERROR: WatchExtraction; msg=Processing Failed > 'lot'; url= https://jewelry.ha.com/itm/estate-jewelry/ruby-diamond-gold-earrings-each-features-oval-shaped-rubies-measuring-approximately-400-x-300-mm-enhanced-by-europea/a/646-39394.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:44:02 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/ruby-diamond-gold-earrings-each-features-oval-shaped-rubies-measuring-approximately-400-x-300-mm-enhanced-by-europea/a/646-39394.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 62, in process_item
+    lot.lot_number = item["lot"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'lot'
+
+2020-05-01 20:44:03 [root] ERROR: WatchExtraction; msg=Processing Failed > 'lot'; url= https://jewelry.ha.com/itm/estate-jewelry/peridot-diamond-gold-brooch-the-brooch-designed-as-a-four-leaf-clover-features-heart-shaped-peridot-measuring-approxi/a/646-39425.s?ic4=GalleryView-ShortDescription-071515
+2020-05-01 20:44:03 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/peridot-diamond-gold-brooch-the-brooch-designed-as-a-four-leaf-clover-features-heart-shaped-peridot-measuring-approxi/a/646-39425.s?ic4=GalleryView-ShortDescription-071515; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 62, in process_item
+    lot.lot_number = item["lot"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'lot'
+
+2020-05-01 20:44:03 [root] ERROR: HeritageSpider; msg=Crawling Failed > Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:44:03 [root] ERROR: HeritageSpider; msg=Crawling Failed;url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417;Error=Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/spiders/HeritageSpider.py", line 99, in parseBS
+    browser.get(url)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: no such session
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.14.173-137.229.amzn2.x86_64 x86_64)
+
+
+2020-05-01 20:44:05 [root] ERROR: WatchExtraction; msg=Processing Failed > 'lot'; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417
+2020-05-01 20:44:05 [root] ERROR: WatchExtraction; msg=Processing Failed; url= https://jewelry.ha.com/itm/estate-jewelry/diamond-white-gold-bracelet/a/23155-10001.s?ic4=OtherResults-SampleItem-071515&tab=ArchiveSearchResults-012417; Error: Traceback (most recent call last):
+  File "/watches_wwww/watchscrapy/watchscrapy/pipelines.py", line 62, in process_item
+    lot.lot_number = item["lot"]
+  File "/watches_wwww/watchscrapyenv/lib/python3.7/site-packages/scrapy/item.py", line 83, in __getitem__
+    return self._values[key]
+KeyError: 'lot'
+
+2020-05-01 20:44:05 [root] WARNING: WatchExtraction; msg=All Data Extraction  has been Completed;
