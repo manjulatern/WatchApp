@@ -25,6 +25,7 @@ from watchapp.views import index
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('watchapp.urls')),
+    path("gold/", include('goldapp.urls')),
 ]
 # fmt: on
 

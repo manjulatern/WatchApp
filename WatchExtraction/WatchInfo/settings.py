@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "base_objects",
-    "watchapp"
+    "watchapp",
+    "goldapp",
     # Put your new apps here!
 ]
 

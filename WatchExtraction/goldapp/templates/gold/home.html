@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+<div class="container-fluid">
+<hr/>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Gold Dashboard</h1>
+</div>
+<hr/>
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Gold Chart</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Gold Data</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Coins</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-test-tab" data-toggle="pill" href="#pills-test" role="tab" aria-controls="pills-test" aria-selected="false">Configuration</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">{% include "gold/widgets/gold_chart.html" %}</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">{% include "gold/widgets/gold_data.html" %}</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="
+  pills-contact-tab">{% include "gold/widgets/coins.html" %}</div>
+  <div class="tab-pane fade" id="pills-test" role="tabpanel" aria-labelledby="pills-test-tab">{% include "gold/widgets/configuration.html" %}</div>
+</div>
+
+</div>
+
+{% endblock %}

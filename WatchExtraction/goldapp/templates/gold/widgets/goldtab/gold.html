@@ -1,0 +1,66 @@
+<div class="col-xl-8 col-lg-7">
+         		<table class="table table-bordered">
+				  <thead>
+				    <tr>
+				      <th colspan="2" scope="col">Gold $/gm</th>
+				      <th scope="col">$</th>
+				      <th scope="col">US$</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td rowspan="4" style="text-align:center;">
+				      	<form class="form-inline">
+						  <select onchange="get_gold(this.value)"class="custom-select my-1 mr-sm-2" id="select_goldk">
+						    <option value="9">9k</option>
+						    <option value="14">14k</option>
+						    <option value="18">18k</option>
+						    <option value="22">22k</option>
+						  </select>
+				  	  </td>
+				      <td>0%</td>
+				      <td>796</td>
+				      <td>18.09</td>
+				    </tr>
+				    <tr>
+				      <td>5%</td>
+				      <td>756</td>
+				      <td>17.19</td>
+				    </tr>
+				    <tr>
+				      <td>10%</td>
+				      <td>716</td>
+				      <td>16.28</td>
+				    </tr>
+				    <tr>
+				      <td>15%</td>
+				      <td>677</td>
+				      <td>15.38</td>
+				    </tr>
+				    <tr>
+				      <td>Custom</td>
+				      <td>
+			            <div class="col-sm-9 my-1">
+			               <div class="input-group">
+			                 <input type="text" class="form-control" name="platinum_bp"> &nbsp; %
+			               </div>
+			             </div>
+			          </td>
+				      <td>326</td>
+				      <td>7.42</td>
+				    </tr>
+				    <tr>
+				      <td colspan="2" style="text-align:center;">24k</td>
+				      <td>2,242</td>
+				      <td>50.96</td>
+				    </tr>
+				  </tbody>
+				</table>
+</div>
+{% block body_js %}
+<script type="text/javascript">
+	function get_gold(value){
+		console.log(value);
+	}
+</script>
+{% endblock %}
