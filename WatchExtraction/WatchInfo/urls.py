@@ -29,5 +29,4 @@ urlpatterns = [
 # fmt: on
 
 if settings.DEBUG:
-    # Serve media files in development server.
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
