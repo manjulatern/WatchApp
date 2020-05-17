@@ -1,4 +1,5 @@
-<form>
+<form class="form" action="updateConfig/" method="POST">
+  {% csrf_token %}
   <div class="row justify-content-center">
     <div class="col-auto">
       <table class="table table-responsive-lg table-striped" >
@@ -16,21 +17,21 @@
             <td>
                <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="gold_c">
+                   <input type="text" class="form-control" name="gold_c" value="{{config.gold_c}}">
                  </div>
                </div>
             </td>
             <td>
               <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="platinum_c">
+                   <input type="text" class="form-control" name="platinum_c" value="{{config.platinum_c}}">
                  </div>
                </div>
              </td>
             <td>
               <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="silver_c">
+                   <input type="text" class="form-control" name="silver_c" value="{{config.silver_c}}">
 
                  </div>
                </div>
@@ -41,21 +42,21 @@
             <td>
                <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="gold_sp">
+                   <input type="text" class="form-control" name="gold_sp" value="{{config.gold_sp}}">
                  </div>
                </div>
             </td>
             <td>
               <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="platinum_sp">
+                   <input type="text" class="form-control" name="platinum_sp" value="{{config.platinum_sp}}">
                  </div>
                </div>
              </td>
             <td>
               <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="silver_sp">
+                   <input type="text" class="form-control" name="silver_sp" value="{{config.silver_sp}}">
                  </div>
                </div>
              </td>
@@ -75,7 +76,7 @@
             <td>
               <div class="col-sm-12 my-1">
                  <div class="input-group input-group-sm">
-                   <input type="text" class="form-control" name="platinum_bp">
+                   <input type="text" class="form-control" name="platinum_bp" value="{{config.platinum_bp}}">
                  </div>
                </div>
              </td>
@@ -93,7 +94,7 @@
         </tbody>
       </table>
       <div class="col-sm-6 my-1">
-        <button class="btn btn-warning btn-user btn-block">Update</button>
+        <button type="submit" class="btn btn-warning btn-user btn-block">Update</button>
       </div>
     </div>
   </div>
