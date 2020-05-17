@@ -1,14 +1,17 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from datetime import datetime
+import json
+from django.core import serializers
+from django.core.serializers.json import DjangoJSONEncoder
 
 from .models import *
 
 # Create your views here.
 def home(request):
 	template = loader.get_template('gold/home.html')
-
+	#>>>>>>>> Configuration Data <<<<<<<<<<
 	#Populate Gold Price Weight using curl
 	gold_price_weight = populate_gold_price()
 	
@@ -19,7 +22,7 @@ def home(request):
 	# Load Configuration
 	config = Configuration.objects.all().first()
 	
-	#Load grams data
+	#Load Configuration grams data
 	grams_data = calculate_grams(config,gold_price_weight)
 
 	context = {
@@ -120,6 +123,22 @@ def calculate_grams(config,gold_price_weight):
 	
 	return calc_data
 
+def myajaxview(request,percentage,goldgram):
+	print(goldgram)
+	percentage = float(percentage)
+	goldgram = float(goldgram)
+	coins_pre = Coin.objects.all()
+	coins = []
+	for old_coin in coins_pre:
+		new_coin = {}
+		new_coin["id"] = old_coin.pk
+		new_coin["name"] = old_coin.name
+		new_coin["weight"] = round(old_coin.pure_gold / old_coin.factor,6)
+		new_coin["pure_gold"] = old_coin.pure_gold
+		new_coin["price"] = round(old_coin.pure_gold * goldgram * (1-(percentage/100)),1)
+		coins.append(new_coin)
+	
+	return HttpResponse(json.dumps(coins),content_type='application/json')
 
 
 
