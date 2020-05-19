@@ -1,0 +1,34 @@
+<div class="row justify-content-center">
+    <div class="col-auto">
+	    <table class="table table-responsive-lg table-striped" >
+	      <tbody>
+	        <tr>
+	          <th scope="row">$/USD</th>
+	          <td>{{gold_price_weight.gold_price}}</td>
+	        </tr>
+	      </tbody>
+	  	</table>
+	  	<br/>
+	  	<table class="table table-responsive-lg table-striped" >
+	      <tbody>
+	        <tr>
+	          <th ></th>
+	          <th scope="col">Ounce</th>
+	        </tr>
+	        <tr class="table-warning">
+	          <th scope="row">Gold</th>
+	          <td>{{gold_price_weight.gold_weight}}</td>
+	        </tr>
+	        <tr class="table-primary">
+	          <th scope="row">Platinum</th>
+	          <td>{{gold_price_weight.platinum_weight}}</td>
+	        </tr>
+	        <tr class="table-dark">
+	          <th scope="row">Silver</th>
+	          <td>{{gold_price_weight.silver_weight}}</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	    <p><span class="badge badge-secondary">Last updated on: {{gold_price_weight.last_updated}}</span></p>
+ 	</div>
+</div>
