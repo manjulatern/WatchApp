@@ -1,4 +1,4 @@
-<div class="col-xl-4 col-lg-7">
+<div class="col-xl-8 col-lg-7">
          		<table class="table table-bordered">
 				  <thead>
 				    <tr>
@@ -9,37 +9,52 @@
 				  </thead>
 				  <tbody>
 				    <tr>
-				      <td rowspan="4" style="text-align:center;">999</td>
+				      <td rowspan="4" id="platinum_bp_thousand" style="text-align:center;">
+
+				  	  </td>
 				      <td>0%</td>
-				      <td>796</td>
-				      <td>18.09</td>
+				      <td id="p_dollar_0"></td>
+				      <td id="p_usdollar_0"></td>
 				    </tr>
 				    <tr>
 				      <td>5%</td>
-				      <td>756</td>
-				      <td>17.19</td>
+				      <td id="p_dollar_5"></td>
+				      <td id="p_usdollar_5"></td>
 				    </tr>
 				    <tr>
 				      <td>10%</td>
-				      <td>716</td>
-				      <td>16.28</td>
+				      <td id="p_dollar_10"></td>
+				      <td id="p_usdollar_10"></td>
 				    </tr>
 				    <tr>
 				      <td>15%</td>
-				      <td>677</td>
-				      <td>15.38</td>
+				      <td id="p_dollar_15"></td>
+				      <td id="p_usdollar_15"></td>
 				    </tr>
 				    <tr>
 				      <td>Custom</td>
-				      <td><input type="text" value="59%"></td>
-				      <td>326</td>
-				      <td>7.42</td>
+				      <td>
+			            <div class="col-sm-9 my-1">
+			               <div class="input-group">
+			                 <input type="text" id="custom_platinum" class="form-control" name="custom_platinum_p" value="0"> &nbsp; %
+			               </div>
+			             </div>
+			          </td>
+				      <td id="platinum_dollar_custom"></td>
+				      <td id="platinum_usdollar_custom"></td>
 				    </tr>
 				    <tr>
 				      <td colspan="2" style="text-align:center;">1000</td>
-				      <td>2,242</td>
-				      <td>50.96</td>
+				      <td id="p_dollar_1000"></td>
+				      <td id="p_usdollar_1000"></td>
 				    </tr>
 				  </tbody>
 				</table>
-         	</div>
+</div>
+{% block body_js %}
+<script type="text/javascript">
+	function get_gold(value){
+		console.log(value);
+	}
+</script>
+{% endblock %}

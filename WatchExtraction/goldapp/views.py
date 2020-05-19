@@ -124,7 +124,6 @@ def calculate_grams(config,gold_price_weight):
 	return calc_data
 
 def myajaxview(request,percentage,goldgram):
-	print(goldgram)
 	percentage = float(percentage)
 	goldgram = float(goldgram)
 	coins_pre = Coin.objects.all()
@@ -140,5 +139,57 @@ def myajaxview(request,percentage,goldgram):
 	
 	return HttpResponse(json.dumps(coins),content_type='application/json')
 
+def gold_data(request,carat,goldgram,percentage=0):
+	config = Configuration.objects.all().first()
+	percentage = [0,5,10,15,percentage]
+	value = CaratInformation.objects.filter(key=carat).first().value
 
+	rate = GoldPriceWeight.objects.all().first().gold_price
+	#calculation
+	results = {}
+	for p in range(len(percentage)):
+		usdollar = round(float(goldgram) * value * (1-float(percentage[p])/100),2)
+		usd = round(usdollar * rate)
+		results[p] = [usd,usdollar]
 
+	value24k = float(goldgram)
+	res24k = round(float(goldgram) * rate)
+	results['24k'] = [res24k,value24k]
+	return HttpResponse(json.dumps(results),content_type='application/json')
+
+def platinum_data(request,platinumgram,percentage=0):
+	config = Configuration.objects.all().first()
+	percentage = [0,5,10,15,percentage]
+	platinum_bp = config.platinum_bp
+
+	rate = GoldPriceWeight.objects.all().first().gold_price
+	#calculation
+	results = {}
+	for p in range(len(percentage)):
+		usdollar = round(float(platinumgram) * (platinum_bp/100) * (1-float(percentage[p])/100),2)
+		usd = round(usdollar * rate)
+		results[p] = [usd,usdollar]
+
+	value1000 = float(platinumgram)
+	res1000 = round(float(platinumgram) * rate)
+	results['1000'] = [res1000,value1000]
+	results['platinum_bp'] = round((platinum_bp/100) * 1000)
+	return HttpResponse(json.dumps(results),content_type='application/json')
+
+def silver_data(request,carat,silvergram,percentage=0):
+	config = Configuration.objects.all().first()
+	percentage = [0,5,10,15,percentage]
+	value = CaratInformation.objects.filter(key=carat).first().value
+
+	rate = GoldPriceWeight.objects.all().first().gold_price
+	#calculation
+	results = {}
+	for p in range(len(percentage)):
+		usdollar = round(float(silvergram) * value * (1-float(percentage[p])/100),2)
+		usd = round(usdollar * rate)
+		results[p] = [usd,usdollar]
+
+	value999 = float(silvergram)
+	res999 = round(float(silvergram) * rate)
+	results['999'] = [res999,value999]
+	return HttpResponse(json.dumps(results),content_type='application/json')
