@@ -27,3 +27,15 @@ class Coin(models.Model):
 	name = models.CharField(max_length=100)
 	pure_gold = models.FloatField()
 	factor = models.FloatField()
+
+class GoldHistory(models.Model):
+	date = models.CharField(max_length=100)
+	price = models.FloatField()
+
+class SilverHistory(models.Model):
+	date = models.CharField(max_length=100)
+	price = models.FloatField()
+
+class PlatinumHistory(models.Model):
+	date = models.CharField(max_length=100)
+	price = models.FloatField()

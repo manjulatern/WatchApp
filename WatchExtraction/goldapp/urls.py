@@ -4,6 +4,7 @@ from goldapp import views
 urlpatterns = [
 		path("", views.home),
 		path("updateConfig/",views.update_configuration),
+		path("chart_data/",views.chart_data),
 		re_path(r'^getdata_json/(?P<percentage>\d+(?:\.\d+)?)/(?P<goldgram>\d+(?:\.\d+)?)', views.myajaxview, name='getdata_json'),
 		re_path(r'^gold_data/(?P<carat>\w+?)/(?P<goldgram>\d+(?:\.\d+)?)/(?P<percentage>\d+(?:\.\d+)?)', views.gold_data, name='gold_data'),
 		re_path(r'^platinum_data/(?P<platinumgram>\d+(?:\.\d+)?)/(?P<percentage>\d+(?:\.\d+)?)', views.platinum_data, name='platinum_data'),
