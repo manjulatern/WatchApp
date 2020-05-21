@@ -177,13 +177,7 @@ $(function() {
 })
 
 $(function() {
-
-	$("#pills-chart-tab").click(function(){
-		alert(1);
-		populate_chart();
-
-	});
-	
+	populate_chart();
 
 	function populate_chart(){
 		silver_carat = $( "#select_silver option:selected" ).text();
@@ -212,7 +206,7 @@ $(function() {
 		  data: {
 		    labels: labels,
 		    datasets: [{
-		      label: "Earnings",
+		      label: "Price",
 		      lineTension: 0.3,
 		      backgroundColor: "rgba(78, 115, 223, 0.05)",
 		      borderColor: "rgba(78, 115, 223, 1)",
@@ -228,7 +222,7 @@ $(function() {
 		    }],
 		  },
 		  options: {
-		    maintainAspectRatio: false,
+		    maintainAspectRatio: true,
 		    layout: {
 		      padding: {
 		        left: 10,
@@ -247,7 +241,7 @@ $(function() {
 		          drawBorder: false
 		        },
 		        ticks: {
-		          maxTicksLimit: 7
+		          maxTicksLimit: 30
 		        }
 		      }],
 		      yAxes: [{

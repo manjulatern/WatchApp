@@ -199,13 +199,13 @@ def chart_data(request):
 	results = []
 
 	#Load Chart data
-	gold_data = GoldHistory.objects.all().order_by('date')[1:1000]
+	gold_data = GoldHistory.objects.all().order_by('date')[1:30]
 
 	for gold in gold_data:
 		res = []
 		
 		timestamp = datetime.fromtimestamp(int(gold.date))
-		res_date = timestamp.strftime('%Y-%m-%d')
+		res_date = timestamp.strftime('%b-%d')
 
 		res.append(str(res_date))
 		res.append(gold.price)
