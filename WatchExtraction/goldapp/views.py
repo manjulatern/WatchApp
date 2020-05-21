@@ -193,3 +193,23 @@ def silver_data(request,carat,silvergram,percentage=0):
 	res999 = round(float(silvergram) * rate)
 	results['999'] = [res999,value999]
 	return HttpResponse(json.dumps(results),content_type='application/json')
+
+def chart_data(request):
+	#calculation
+	results = []
+
+	#Load Chart data
+	gold_data = GoldHistory.objects.all().order_by('date')[1:1000]
+
+	for gold in gold_data:
+		res = []
+		
+		timestamp = datetime.fromtimestamp(int(gold.date))
+		res_date = timestamp.strftime('%Y-%m-%d')
+
+		res.append(str(res_date))
+		res.append(gold.price)
+		#results[res_date] = gold.price
+		results.append(res)
+
+	return HttpResponse(json.dumps(results),content_type='application/json')
