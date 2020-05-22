@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block body_content %}
-<div class="container-fluid">
+<br/>
+<br/>
 <hr/>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Gold Dashboard</h1>
@@ -29,9 +30,6 @@
   pills-coins-tab">{% include "gold/widgets/coins.html" %}</div>
   <div class="tab-pane fade" id="pills-config" role="tabpanel" aria-labelledby="pills-config-tab">{% include "gold/widgets/configuration.html" %}</div>
 </div>
-
-</div>
-
 {% endblock %}
 {% block body_js %}
 <script type="text/javascript">

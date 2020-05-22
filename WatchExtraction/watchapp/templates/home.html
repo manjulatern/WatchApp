@@ -1,52 +1,64 @@
 {% extends "base.html" %}
 
 {% block body_content %}
-<div class="container-fluid">
+<br/>
+<br/>
+<hr/>
 
 	<div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-sm-6">
+              <a href="/watch">
+                <div class="card">
+                  <img class="card-img-top" src="/static/images/watches.png" alt="Card image top">
+                  <div class="card-img-overlay">
+                  </div>
+                  <span class="btn btn-block badge badge-secondary text-uppercase">Watches</span>
+                </div>
+              </a>
+            </div>    
+        <!--
+            <div class="col-sm-6">
             	<a href="/watch">
-	              <div class="card border-left-primary shadow h-100 py-2">
-	                <div class="card-body">
+	              <div class="card h-50">
+	                <div class="card-img-overlay">
 	                  <div class="row no-gutters align-items-center" align="center">
 	                    <div class="col mr-2">
-	                    	<img class="mb-2" src="/static/images/watches.png" width="175" height="175">
+	                    	<img class="mb-2" src="/static/images/watches.png" width="100%" height="100%">
 	                    </div>	
-	                    
+	                   </div>
 	                     	<span class="btn btn-block badge badge-secondary text-uppercase">Watches</span>
 	                  </div>
-	                </div>
 	              </div>
           		</a>
             </div>
-
+          -->
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-sm-6">
               <a href="/gold">
                 <div class="card border-left-primary shadow h-100 py-2">
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2" align="center">
-                        <img class="mb-2" src="/static/images/gold.png" width="175" height="175">
+                        <img class="mb-2" src="/static/images/gold.png" width="100%" height="100%">
                       </div>  
-                      
-                        <span class="btn btn-block badge badge-secondary text-uppercase">Gold</span>
                     </div>
+                        <span class="btn btn-block badge badge-secondary text-uppercase">Gold</span>
                   </div>
                 </div>
               </a>
             </div>
-
+</div>
+<div class="row">
             <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-sm-6">
               <a href="/diamond">
                 <div class="card border-left-primary shadow h-100 py-2">
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2" align="center">
-                        <img  class="mb-2" src="/static/images/diamonds.png" width="175" height="175">
+                        <img  class="mb-2" src="/static/images/diamonds.png" width="100%" height="100%">
                       </div>  
                       
                         <span class="btn btn-block badge badge-secondary text-uppercase">Diamonds</span>
@@ -56,5 +68,4 @@
               </a>
             </div>
 </div>
-
 {% endblock %}

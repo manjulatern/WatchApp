@@ -199,7 +199,7 @@ def chart_data(request):
 	results = []
 
 	#Load Chart data
-	gold_data = GoldHistory.objects.all().order_by('date')[1:30]
+	gold_data = GoldHistory.objects.all().order_by('date')[:30]
 
 	for gold in gold_data:
 		res = []

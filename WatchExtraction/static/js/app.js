@@ -222,12 +222,16 @@ $(function() {
 		    }],
 		  },
 		  options: {
+		  	title: {
+            	display: true,
+            	text: 'Price Trend for Gold (Last 30 days)'
+        	},
 		    maintainAspectRatio: true,
 		    layout: {
 		      padding: {
 		        left: 10,
 		        right: 25,
-		        top: 25,
+		        top: -10,
 		        bottom: 0
 		      }
 		    },
@@ -263,7 +267,7 @@ $(function() {
 		      }],
 		    },
 		    legend: {
-		      display: false
+		      display: true
 		    },
 		    tooltips: {
 		      backgroundColor: "rgb(255,255,255)",
