@@ -5,16 +5,17 @@ from datetime import datetime
 import json
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
-
+from goldapp.cron import GoldCron
 from .models import *
 
 # Create your views here.
 def home(request):
-	template = loader.get_template('gold/home.html')
-	#>>>>>>>> Configuration Data <<<<<<<<<<
-	#Populate Gold Price Weight using curl
-	gold_price_weight = populate_gold_price()
+	template = loader.get_template('gold/home.html')	
 	
+	#goldCron = GoldCron()
+	#goldCron.insert_gold_data()
+	
+	gold_price_weight = GoldPriceWeight.objects.all().first()
 	# Load Carat Information
 	carat_gold = CaratInformation.objects.filter(key_type='gold')
 	carat_silver = CaratInformation.objects.filter(key_type='silver')
@@ -34,32 +35,23 @@ def home(request):
 		}
 	return HttpResponse(template.render(context, request))
 
-def populate_gold_price():
-	gold_price_weight = GoldPriceWeight.objects.all().first()
-	if not gold_price_weight:
-		gold_price_weight = GoldPriceWeight()
-
-	gold_price = 44.00
-
-	gold_weight = 1706.00
-	platinum_weight = 894.00
-	silver_weight = 15.00
-	last_updated = datetime.now()
-
-	gold_price_weight.gold_price = gold_price
-	gold_price_weight.gold_weight = gold_weight
-	gold_price_weight.platinum_weight = platinum_weight
-	gold_price_weight.silver_weight = silver_weight
-	gold_price_weight.last_updated = last_updated
-	gold_price_weight.save()
-	return gold_price_weight
+def fetchNow(request):
+	goldCron = GoldCron()
+	goldCron.insert_gold_data()
+	gpw = GoldPriceWeight.objects.all().first()
+	results = {}
+	results['gold_price'] = gpw.gold_price
+	results['gold_weight'] = gpw.gold_weight
+	results['platinum_weight'] = gpw.platinum_weight
+	results['silver_weight'] = gpw.silver_weight
+	results['last_updated'] = gpw.last_updated.strftime("%b %d, %Y, %-H:%-M %p")
+	return HttpResponse(json.dumps(results),content_type='application/json')
 
 def update_configuration(request):
 	if request.method == "POST":
 		config = Configuration.objects.all().first()
 		if not config:
 			config = Configuration()
-		print(config)
 		gold_c = request.POST.get('gold_c')
 		platinum_c = request.POST.get('platinum_c')
 		silver_c = request.POST.get('silver_c')

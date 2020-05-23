@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "base_objects",
     "watchapp",
     "goldapp",
+    "django_crontab",
     # Put your new apps here!
 ]
 
@@ -89,6 +90,10 @@ DATABASES = {
 #    }
 }
 
+CRONJOBS = [
+    ('* * * * *', 'goldapp.cron.gold_data_cron','>> ~/cron.log')
+]
+CRONTAB_COMMAND_SUFFIX = '2>&1'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
