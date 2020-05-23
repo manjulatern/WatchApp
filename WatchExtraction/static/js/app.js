@@ -320,3 +320,30 @@ $(function() {
 		  return s.join(dec);
 		}
 })
+
+$(function() {
+	$body = $("body");
+
+	$(document).on({
+    	ajaxStart: function() { $body.addClass("loading");    },
+     	ajaxStop: function() { $body.removeClass("loading"); }    
+	});
+
+	$("#fetch-now").click(function(){
+		fetch_data_load();
+	});
+
+	function fetch_data_load(){
+		$.ajax(
+	  		{
+	  		url: "/gold/fetchNow/",
+	  		success: function(result){
+	  			$("#gold_price").text(result['gold_price']);
+	  			$("#gold_weight").text(result['gold_weight']);
+	  			$("#platinum_weight").text(result['platinum_weight']);
+	  			$("#silver_weight").text(result['silver_weight']);
+	  			$("#last_updated").text(result['last_updated']);
+	  		}
+	  	});
+	}
+})

@@ -35,7 +35,7 @@
 <script type="text/javascript">
 
 function load_coins_data(value){
-    if(value===undefined){
+    if(value===undefined || value==="" ){
       value=10;
     }
     gold_gram = $("#gold_gram").text()
@@ -55,9 +55,5 @@ function load_coins_data(value){
         ]
     } );
 } 
-
-function load_gold_data(){
-  alert(1);
-}
 </script>
 {% endblock %}
