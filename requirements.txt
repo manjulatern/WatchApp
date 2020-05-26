@@ -13,6 +13,7 @@ cookiecutter==1.7.0
 cryptography==2.9
 cssselect==1.1.0
 Django==3.0.5
+django-crontab==0.7.1
 future==0.18.2
 hyperlink==19.0.0
 idna==2.9
@@ -27,6 +28,7 @@ Protego==0.1.16
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
+pycurl==7.43.0.5
 PyDispatcher==2.0.5
 PyHamcrest==2.0.2
 pyOpenSSL==19.1.0

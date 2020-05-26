@@ -3,7 +3,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-	url(r'^$', views.home, name='home'),
+	url(r'^$', views.login, name='login'),
+	url(r'^logout/$', views.logout, name='logout'),
+	url(r'^home/$', views.home, name='home'),
 	url(r'^watch/$', views.index, name='index'),
 	url(r'^watch/lot/(?P<lot>[A-Za-z0-9]+)/$', views.lot_details, name='lot_details'),
 	url(r'^jobs/(?P<job>[0-9]+)/$', views.job_details, name='job_details'),
