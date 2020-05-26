@@ -2,6 +2,8 @@ from django.db import migrations, models
 import os
 import sqlite3
 from sqlite3 import Error
+from datetime import datetime
+import pytz
 
 def load_history_data(apps, schema_editor):
     GoldH = apps.get_model("goldapp", "GoldHistory")
@@ -17,19 +19,22 @@ def load_history_data(apps, schema_editor):
         gold_data = get_gold_price(conn)
         print("Loading Gold History Data.......")
         for i in range(len(gold_data)):
-            row = GoldH(id=i+1,date=gold_data[i][0],price=gold_data[i][1])
+            date = datetime.fromtimestamp(int(gold_data[i][0])).replace(tzinfo=pytz.utc)
+            row = GoldH(id=i+1,date=date,price=gold_data[i][1])
             row.save()
         
         print("Loading Silver History Data")
         silver_data = get_silver_price(conn)
         for i in range(len(silver_data)):
-            row = SilverH(id=i+1,date=silver_data[i][0],price=silver_data[i][1])
+            date = datetime.fromtimestamp(int(silver_data[i][0])).replace(tzinfo=pytz.utc)
+            row = SilverH(id=i+1,date=date,price=silver_data[i][1])
             row.save()
 
         print("Loading Platinum History Data")
         platinum_data = get_platinum_price(conn)
         for i in range(len(platinum_data)):
-            row = PlatinumH(id=i+1,date=platinum_data[i][0],price=platinum_data[i][1])
+            date = datetime.fromtimestamp(int(platinum_data[i][0])).replace(tzinfo=pytz.utc)
+            row = PlatinumH(id=i+1,date=date,price=platinum_data[i][1])
             row.save()
         
 

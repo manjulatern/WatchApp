@@ -176,150 +176,6 @@ $(function() {
 	}
 })
 
-$(function() {
-	populate_chart();
-
-	function populate_chart(){
-		silver_carat = $( "#select_silver option:selected" ).text();
-		silver_gram = $("#silver_gram").text()
-		percentage = $("#custom_silver").val()
-	  	$.ajax(
-	  		{
-	  		url: "/gold/chart_data/",
-	  		success: function(result){
-	  			load_chart(result)
-	    	
-	  		}
-	  	});
-	}
-
-	function load_chart(result){
-		labels = []
-		data = []
-		for(var i =0;i<result.length;i++){
-			labels.push(result[i][0])
-			data.push(result[i][1])
-		}
-		var ctx = document.getElementById("myAreaChart");
-		var myLineChart = new Chart(ctx, {
-		  type: 'line',
-		  data: {
-		    labels: labels,
-		    datasets: [{
-		      label: "Price",
-		      lineTension: 0.3,
-		      backgroundColor: "rgba(78, 115, 223, 0.05)",
-		      borderColor: "rgba(78, 115, 223, 1)",
-		      pointRadius: 3,
-		      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-		      pointBorderColor: "rgba(78, 115, 223, 1)",
-		      pointHoverRadius: 3,
-		      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-		      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-		      pointHitRadius: 10,
-		      pointBorderWidth: 2,
-		      data: data
-		    }],
-		  },
-		  options: {
-		  	title: {
-            	display: true,
-            	text: 'Price Trend for Gold (Last 30 days)'
-        	},
-		    maintainAspectRatio: true,
-		    layout: {
-		      padding: {
-		        left: 10,
-		        right: 25,
-		        top: -10,
-		        bottom: 0
-		      }
-		    },
-		    scales: {
-		      xAxes: [{
-		        time: {
-		          unit: 'date'
-		        },
-		        gridLines: {
-		          display: false,
-		          drawBorder: false
-		        },
-		        ticks: {
-		          maxTicksLimit: 30
-		        }
-		      }],
-		      yAxes: [{
-		        ticks: {
-		          maxTicksLimit: 5,
-		          padding: 10,
-		          // Include a dollar sign in the ticks
-		          callback: function(value, index, values) {
-		            return '$' + number_format(value);
-		          }
-		        },
-		        gridLines: {
-		          color: "rgb(234, 236, 244)",
-		          zeroLineColor: "rgb(234, 236, 244)",
-		          drawBorder: false,
-		          borderDash: [2],
-		          zeroLineBorderDash: [2]
-		        }
-		      }],
-		    },
-		    legend: {
-		      display: true
-		    },
-		    tooltips: {
-		      backgroundColor: "rgb(255,255,255)",
-		      bodyFontColor: "#858796",
-		      titleMarginBottom: 10,
-		      titleFontColor: '#6e707e',
-		      titleFontSize: 14,
-		      borderColor: '#dddfeb',
-		      borderWidth: 1,
-		      xPadding: 15,
-		      yPadding: 15,
-		      displayColors: false,
-		      intersect: false,
-		      mode: 'index',
-		      caretPadding: 10,
-		      callbacks: {
-		        label: function(tooltipItem, chart) {
-		          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-		          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
-		        }
-		      }
-		    }
-		  }
-		});
-
-	}
-
-	function number_format(number, decimals, dec_point, thousands_sep) {
-		  // *     example: number_format(1234.56, 2, ',', ' ');
-		  // *     return: '1 234,56'
-		  number = (number + '').replace(',', '').replace(' ', '');
-		  var n = !isFinite(+number) ? 0 : +number,
-		    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-		    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
-		    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-		    s = '',
-		    toFixedFix = function(n, prec) {
-		      var k = Math.pow(10, prec);
-		      return '' + Math.round(n * k) / k;
-		    };
-		  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
-		  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
-		  if (s[0].length > 3) {
-		    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
-		  }
-		  if ((s[1] || '').length < prec) {
-		    s[1] = s[1] || '';
-		    s[1] += new Array(prec - s[1].length + 1).join('0');
-		  }
-		  return s.join(dec);
-		}
-})
 
 $(function() {
 	$body = $("body");
@@ -347,3 +203,106 @@ $(function() {
 	  	});
 	}
 })
+
+$(function () {
+	$(".tab-d").click(function(){
+		$(".tab-d").each(function() {
+       		$(this).find("span").removeClass("badge-secondary");
+     	});
+		
+		$(this).find("span").addClass("badge-secondary");
+	});
+	var $swipeTabsContainer = $('.swipe-tabs'),
+		$swipeTabs = $('.swipe-tab'),
+		$swipeTabsContentContainer = $('.swipe-tabs-container'),
+		currentIndex = 0,
+		activeTabClassName = 'active-tab';
+
+	$swipeTabsContainer.on('init', function(event, slick) {
+		$swipeTabsContentContainer.removeClass('invisible');
+		$swipeTabsContainer.removeClass('invisible');
+
+		currentIndex = slick.getCurrent();
+		$swipeTabs.removeClass(activeTabClassName);
+       	$('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+	});
+
+	$swipeTabsContainer.slick({
+		//slidesToShow: 3.25,
+		slidesToShow: 10,
+		slidesToScroll: 1,
+		centreMode: true,
+		arrows: false,
+		infinite: false,
+		swipeToSlide: true,
+		touchThreshold: 10,
+		dots: false,
+		  infinite: false,
+		  speed: 300,
+		  responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 10,
+		        slidesToScroll: 1,
+		        infinite: true,
+		        dots: false
+		      }
+		    },
+		    {
+		      breakpoint: 700,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 1,
+		        infinite: true,
+		        dots: false
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 1
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+	});
+
+	$swipeTabsContentContainer.slick({
+		asNavFor: $swipeTabsContainer,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		infinite: false,
+		swipeToSlide: true,
+    	draggable: false,
+		touchThreshold: 10
+	});
+
+
+	$swipeTabs.on('click', function(event) {
+        // gets index of clicked tab
+        currentIndex = $(this).data('slick-index');
+        $swipeTabs.removeClass(activeTabClassName);
+        $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
+        $swipeTabsContainer.slick('slickGoTo', currentIndex);
+        $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
+    });
+
+    //initializes slick navigation tabs swipe handler
+    $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
+    	currentIndex = $(this).slick('slickCurrentSlide');
+		$swipeTabs.removeClass(activeTabClassName);
+		$('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+	});
+});

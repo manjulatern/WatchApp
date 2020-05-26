@@ -8,7 +8,11 @@ from django.core.serializers.json import DjangoJSONEncoder
 from goldapp.cron import GoldCron
 from .models import *
 
-# Create your views here.
+from django.contrib.auth.decorators import login_required
+
+from django.db import connection
+
+@login_required
 def home(request):
 	template = loader.get_template('gold/home.html')	
 	
@@ -186,22 +190,40 @@ def silver_data(request,carat,silvergram,percentage=0):
 	results['999'] = [res999,value999]
 	return HttpResponse(json.dumps(results),content_type='application/json')
 
-def chart_data(request):
-	#calculation
-	results = []
+def chart_data(request,val):
+	if val == "last15days":
+		label = "Last 15 Days"
+		query = '''select strftime("%Y-%m-%d", date) as "month-year",AVG(price) as Price from goldapp_goldhistory group by strftime("%Y-%m-%d", date) order by id desc limit 15;'''
 
+	if val == "last12months":
+		label = "Last 12 Months"
+		query = '''select strftime("%m-%Y", date) as "month-year",AVG(price) as Price from goldapp_goldhistory group by strftime("%m-%Y", date) order by id desc limit 15;'''
+	
+	if val == "last10years":
+		label = "Last 10 Years"
+		query = '''select strftime("%Y", date) as "year",AVG(price) as Price from goldapp_goldhistory group by strftime("%Y", date) order by id desc limit 10;'''
+
+
+	#calculation
+	results = {}
+	data = []
 	#Load Chart data
-	gold_data = GoldHistory.objects.all().order_by('date')[:30]
+	cursor = connection.cursor()
+	
+	gold_data = cursor.execute(query)
 
 	for gold in gold_data:
 		res = []
-		
-		timestamp = datetime.fromtimestamp(int(gold.date))
-		res_date = timestamp.strftime('%b-%d')
-
+		res_date = gold[0]
 		res.append(str(res_date))
-		res.append(gold.price)
-		#results[res_date] = gold.price
-		results.append(res)
-
+		res.append(gold[1])
+		data.append(res)
+	data.reverse()
+	results["data"] = data
+	results["label"] = label
+	cursor.close()
 	return HttpResponse(json.dumps(results),content_type='application/json')
+
+def test(request):
+	template = loader.get_template('gold/test.html')
+	return HttpResponse(template.render({}, request))	

@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models import Func
+
 
 # Create your models here.
 class Configuration(models.Model):
@@ -29,13 +31,18 @@ class Coin(models.Model):
 	factor = models.FloatField()
 
 class GoldHistory(models.Model):
-	date = models.CharField(max_length=100)
+	date = models.DateTimeField()
 	price = models.FloatField()
 
 class SilverHistory(models.Model):
-	date = models.CharField(max_length=100)
+	date = models.DateTimeField()
 	price = models.FloatField()
 
 class PlatinumHistory(models.Model):
-	date = models.CharField(max_length=100)
+	date = models.DateTimeField()
 	price = models.FloatField()
+
+class Month(Func):
+    function = 'EXTRACT'
+    template = '%(function)s(MONTH from %(expressions)s)'
+    output_field = models.IntegerField()

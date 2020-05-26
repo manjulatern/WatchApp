@@ -8,13 +8,42 @@ import time
 from django.db import connection
 from django.db.models import Count,Sum
 
+from django.contrib.auth.models import User
+from django.contrib import auth
+from django.contrib.auth.decorators import login_required
+
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from watchapp.models import Lot, Auction, AuctionHouse, Job, Setup
 import subprocess
 
 # Create your views here.
+def login(request):
+    context = {}
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username=username, password=password)
 
+        if user is not None:
+            # correct username and password login the user
+            auth.login(request, user)
+            return redirect('/home')
+ 
+        else:
+
+            context = {"message": "Invalid Login Credentials"}
+
+    template = loader.get_template('login.html')
+    return HttpResponse(template.render(context, request))
+
+def logout(request):
+    auth.logout(request)
+    template = loader.get_template('login.html')
+    context = {"message":"You have been logged out"}
+    return HttpResponse(template.render(context, request))
+
+@login_required()
 def home(request):
     template = loader.get_template('home.html')
     context = {
@@ -60,6 +89,7 @@ def get_paginationRage(lots):
             'count':lots.end_index()-lots.start_index()
         }
 
+@login_required()
 def index(request):
     template = loader.get_template('all.html')
 
@@ -84,6 +114,7 @@ def index(request):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def lot_details(request,lot):
     template = loader.get_template('lot_details.html')
 
@@ -95,6 +126,7 @@ def lot_details(request,lot):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def advsearch(request):
     lots = []
     search = request.POST.get('search')
@@ -220,6 +252,7 @@ def advsearch(request):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def allJobs(request):
     template = loader.get_template('jobs/jobs.html')
 
@@ -241,6 +274,7 @@ def allJobs(request):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def completedJobs(request):
     template = loader.get_template('jobs/jobs-complete.html')
 
@@ -262,6 +296,7 @@ def completedJobs(request):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def failedJobs(request):
     template = loader.get_template('jobs/jobs-failed.html')
 
@@ -283,10 +318,12 @@ def failedJobs(request):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def addJobs(request):
     template = loader.get_template('jobs/jobs-add.html')
     return HttpResponse(template.render({}, request))
 
+@login_required()
 def createJobs(request):
     if request.method == 'POST':
         auction_house = request.POST.get('auction_house')
@@ -318,6 +355,7 @@ def createJobs(request):
     else:
         return redirect('jobs/add')
 
+@login_required()
 def setup(request):
     setup_obj = Setup.objects.first()
     chromedriver = ""
@@ -342,7 +380,7 @@ def setup(request):
 
     return HttpResponse(template.render(context, request))
 
-
+@login_required()
 def job_details(request,job):
     template = loader.get_template('jobs/job-details.html')
 
@@ -375,7 +413,7 @@ def job_details(request,job):
 
     return HttpResponse(template.render(context, request))
 
-
+@login_required()
 def job_progress_details(request, job):
     template = loader.get_template('jobs/job-details-progress.html')
     job = Job.objects.filter(pk=job).prefetch_related("auction_house").first()
@@ -432,6 +470,7 @@ def job_progress_details(request, job):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def job_kill(request,job):
     jobD = Job.objects.filter(pk=job).first()
     print(job)
@@ -439,6 +478,7 @@ def job_kill(request,job):
     jobD.delete()
     return redirect('/jobs/')
 
+@login_required()
 def job_run(request,job):
     
     jobD = Job.objects.filter(pk=job).prefetch_related("auction_house").first()
@@ -458,6 +498,7 @@ def job_run(request,job):
     
     return redirect('/jobs/')
 
+@login_required()
 def houses(request):
     template = loader.get_template('houses/auction_houses.html')
     all_house_info = []
@@ -482,6 +523,7 @@ def houses(request):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def house_details(request,house):
     template = loader.get_template('houses/auction.html')
 
@@ -504,6 +546,7 @@ def house_details(request,house):
 
     return HttpResponse(template.render(context, request))
 
+@login_required()
 def auction_run(request,auction):
     
     auction = Auction.objects.filter(pk=auction).prefetch_related('auction_house').first()

@@ -6,7 +6,18 @@
    <!-- Area Chart -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <select id="chartSelect" class="form-control">
+            <option value="last15days" selected>Last 15 Days</option>
+            <option value="last12months">Last 12 Months</option>
+            <option value="last10years">Last 10 Years</option>
+          </select>
+        </div>
+        <button class="btn ml-auto float-right" onclick="rotate()" id="button"><i class="fas fa-expand"></i>
+      </button>
+      </div>
+      
     </div>
     <div class="card-body">
       <div class="chart-area">
@@ -22,5 +33,49 @@
   <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
 
   <!-- Page level custom scripts -->
-  <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+  <script src="{% static 'js/charts.js' %}?v=0.1.0"></script>
+<script>
+function fullScreenCheck() {
+  if (document.fullscreenElement) return;
+  return document.documentElement.requestFullscreen();
+}
+
+function updateDetails(lockButton) {
+  const buttonOrientation = getOppositeOrientation();
+  //lockButton.textContent = `Lock to ${buttonOrientation}`;
+}
+
+function getOppositeOrientation() {
+  const { type } = screen.orientation;
+  return type.startsWith("portrait") ? "landscape" : "portrait";
+}
+
+async function rotate() {
+  try {
+    await fullScreenCheck();
+  } catch (err) {
+    console.error(err);
+  }
+  const newOrientation = getOppositeOrientation();
+  await screen.orientation.lock(newOrientation);
+  updateDetails(lockButton);
+}
+
+function show() {
+  const { type, angle } = screen.orientation;
+  console.log(`Orientation type is ${type} & angle is ${angle}.`);
+}
+
+screen.orientation.addEventListener("change", () => {
+  show();
+  updateDetails(document.getElementById("button"));
+});
+
+window.addEventListener("load", () => {
+  show();
+  updateDetails(document.getElementById("button"));
+});
+
+</script>
 {% endblock %}
+

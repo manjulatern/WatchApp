@@ -3,17 +3,17 @@ from goldapp.models import *
 import requests
 from datetime import datetime,date, timedelta
 import time
+import pytz
+
 class GoldCron():
 
     def insert_gold_data(self):
         rate,ddate = self.get_date_rate()
         metals = self.get_date_ounce()
 
-        today = int(time.time())
-
         if metals and rate and ddate:
             goldH = GoldHistory()
-            goldH.date = today
+            goldH.date = datetime.now()
             goldH.price = metals["Gold"]
             goldH.save()
 

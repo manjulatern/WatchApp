@@ -26,6 +26,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('watchapp.urls')),
     path("gold/", include('goldapp.urls')),
+    path("diamond/", include('diamondsapp.urls')),
 ]
 # fmt: on
 

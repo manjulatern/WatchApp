@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "watchapp",
     "goldapp",
     "django_crontab",
+    "diamondsapp"
     # Put your new apps here!
 ]
 
@@ -73,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "WatchInfo.wsgi.application"
 
+LOGIN_URL = "/"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -91,7 +93,7 @@ DATABASES = {
 }
 
 CRONJOBS = [
-    ('* * * * *', 'goldapp.cron.gold_data_cron','>> ~/cron.log')
+    ('0 17 * * *', 'goldapp.cron.gold_data_cron','>> ~/cron.log')
 ]
 CRONTAB_COMMAND_SUFFIX = '2>&1'
 
