@@ -20,8 +20,8 @@ class GoldCron():
             gpWeight = GoldPriceWeight.objects.filter(pk=1).first()
             gpWeight.gold_price = rate
             gpWeight.gold_weight = metals["Gold"]
-            gpWeight.platinum_weight = metals["Silver"]
-            gpWeight.silver_weight = metals["Platinum"]
+            gpWeight.platinum_weight = metals["Platinum"]
+            gpWeight.silver_weight = metals["Silver"]
             gpWeight.last_updated = datetime.now()
             gpWeight.save()
             print("Data Updated Succesfully ",str(datetime.now()))

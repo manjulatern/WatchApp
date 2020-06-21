@@ -24,7 +24,7 @@ SECRET_KEY = "oigyE&A=PM!F!C1IlhsXfWp10dQqoJrkasB#fN*07(MvS#D6D0"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["192.168.100.5"]
 
 
 # Application definition
@@ -79,17 +79,17 @@ LOGIN_URL = "/"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    }
-#    'default':{
-#        'ENGINE':'django.db.backends.mysql',
-#        'NAME':'watchesdb',
-#        'USER':'root',
-#        'PASSWORD':'root',
-
+#    "default": {
+##        "ENGINE": "django.db.backends.sqlite3",
+#        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
 #    }
+    'default':{
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'watchesdb',
+        'USER':'root',
+        'PASSWORD':'',
+
+    }
 }
 
 CRONJOBS = [

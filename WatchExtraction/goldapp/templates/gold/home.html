@@ -41,7 +41,11 @@ function load_coins_data(value){
     gold_gram = $("#gold_gram").text()
     $('#coinsData').DataTable( {
         "bDestroy": true,
-        "pageLength": 50,
+        "bPaginate": false,
+        "bLengthChange": false,
+        "bFilter": true,
+        "bInfo": false,
+        "bAutoWidth": false ,
 
         "ajax": {
             "url": "/gold/getdata_json/"+value+"/"+gold_gram,

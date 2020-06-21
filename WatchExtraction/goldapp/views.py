@@ -191,17 +191,20 @@ def silver_data(request,carat,silvergram,percentage=0):
 	return HttpResponse(json.dumps(results),content_type='application/json')
 
 def chart_data(request,val):
+	if val == "last3days":
+		label = "Last 3 Days"
+		query = '''select DATE_FORMAT(date,"%Y-%m-%d"), price from goldapp_goldhistory where date >= DATE_ADD(CURDATE(),INTERVAL -3 DAY) order by date desc;'''
 	if val == "last15days":
 		label = "Last 15 Days"
-		query = '''select strftime("%Y-%m-%d", date) as "month-year",AVG(price) as Price from goldapp_goldhistory group by strftime("%Y-%m-%d", date) order by id desc limit 15;'''
+		query = '''Select DATE_FORMAT(date,"%Y-%m-%d") as "dateN",AVG(price) as Price from goldapp_goldhistory group by DATE_FORMAT(date,"%Y-%m-%d") order by dateN desc limit 15;'''
 
 	if val == "last12months":
 		label = "Last 12 Months"
-		query = '''select strftime("%m-%Y", date) as "month-year",AVG(price) as Price from goldapp_goldhistory group by strftime("%m-%Y", date) order by id desc limit 15;'''
+		query = '''SELECT concat(YEAR(date),"-",MONTH(date)) as monthyear, AVG(price) FROM goldapp_goldhistory GROUP BY monthyear order by monthyear desc limit 15;'''
 	
 	if val == "last10years":
 		label = "Last 10 Years"
-		query = '''select strftime("%Y", date) as "year",AVG(price) as Price from goldapp_goldhistory group by strftime("%Y", date) order by id desc limit 10;'''
+		query = '''select DATE_FORMAT(date,"%Y") as "year",AVG(price) as Price from goldapp_goldhistory group by DATE_FORMAT(date,"%Y") order by year desc limit 10;'''
 
 
 	#calculation
@@ -210,7 +213,8 @@ def chart_data(request,val):
 	#Load Chart data
 	cursor = connection.cursor()
 	
-	gold_data = cursor.execute(query)
+	cursor.execute(query)
+	gold_data = cursor.fetchall()
 
 	for gold in gold_data:
 		res = []

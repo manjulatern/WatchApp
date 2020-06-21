@@ -9,7 +9,8 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <select id="chartSelect" class="form-control">
-            <option value="last15days" selected>Last 15 Days</option>
+            <option value="last3days" selected>Last 3 Days</option>
+            <option value="last15days">Last 15 Days</option>
             <option value="last12months">Last 12 Months</option>
             <option value="last10years">Last 10 Years</option>
           </select>
@@ -21,7 +22,7 @@
     </div>
     <div class="card-body">
       <div class="chart-area">
-        <canvas id="myAreaChart"></canvas>
+        <canvas id="myAreaChart" height= "250px"></canvas>
       </div>
     </div>
   </div>

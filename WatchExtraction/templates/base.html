@@ -12,9 +12,8 @@
   {% block head_extra_meta %}{% endblock %}
   {## HEAD CSS ##}
   {# Bootstrap 4, served via CDN #}
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-
 
   {# App CSS #}
   <link rel="stylesheet" href="{% static 'css/app.css' %}?v=0.1.0">  {# Tip: update the `?v` param to force browsers to recache a new file version. #}
