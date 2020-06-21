@@ -15,13 +15,13 @@
 <hr/>
 <div class="sub-header ">
   <div class="swipe-tabs">
+    <div class="swipe-tab tab-d" >
+      <img class="zoom" src="{% static 'images/diamond/brillant.png'%}"/>
+      <span class="btn-block badge badge-secondary">Brilliant</span>
+    </div>
     <div class="swipe-tab tab-d">
     	<img class="zoom" src="{% static 'images/diamond/baguette.png'%}"/>
-    	<span class="btn-block badge badge-secondary">Baguette</span>
-    </div>
-    <div class="swipe-tab tab-d" >
-    	<img class="zoom" src="{% static 'images/diamond/brillant.png'%}"/>
-    	<span class="btn-block badge">Brilliant</span>
+    	<span class="btn-block badge">Baguette</span>
     </div>
     <div class="swipe-tab tab-d">
       	<img class="zoom" id="2" src="{% static 'images/diamond/emerald.png'%}"/>
@@ -66,8 +66,8 @@
 </div>
 <div class="main-container">
   <div class="swipe-tabs-container ">
-    <div class="swipe-tab-content">{% include "diamond/widgets/baguette.html" %}</div>
     <div class="swipe-tab-content">{% include "diamond/widgets/brilliant.html" %}</div>
+    <div class="swipe-tab-content">{% include "diamond/widgets/baguette.html" %}</div>
     <div class="swipe-tab-content">{% include "diamond/widgets/emerald.html" %}</div>
     <div class="swipe-tab-content">{% include "diamond/widgets/european.html" %}</div>
     <div class="swipe-tab-content">{% include "diamond/widgets/marquise.html" %}</div>

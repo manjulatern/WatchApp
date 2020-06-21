@@ -13,14 +13,15 @@ $(function() {
 	  		{
 	  		url: "/gold/chart_data/"+val,
 	  		success: function(result){
-	  			load_chart(result)
+	  			load_chart(result,val)
 	  		}
 	  	});
 	}
 	
 	var myLineChart = null
 
-	function load_chart(result){
+	function load_chart(result,val){
+		
 		if(myLineChart!=null){
         	myLineChart.destroy();
     	}
@@ -31,6 +32,15 @@ $(function() {
 			labels.push(res_data[i][0])
 			data.push(res_data[i][1])
 		}
+		if(val==='last3days'){
+			maxTicksLimit = 3;
+			label = "Price";
+			//labels = new Set(labels);
+		}
+		else {
+			maxTicksLimit = 15;
+			label = "Average Price"
+		}
 		var ctx = document.getElementById("myAreaChart");
 		myLineChart = new Chart(ctx, {
 		  type: 'line',
@@ -38,14 +48,14 @@ $(function() {
 		  data: {
 		    labels: labels,
 		    datasets: [{
-		      label: "Avg. Price",
+		      label: label,
 		      lineTension: 0.3,
 		      backgroundColor: "rgba(78, 115, 223, 0.05)",
 		      borderColor: "rgba(78, 115, 223, 1)",
-		      pointRadius: 3,
+		      pointRadius: 1.5,
 		      pointBackgroundColor: "rgba(78, 115, 223, 1)",
 		      pointBorderColor: "rgba(78, 115, 223, 1)",
-		      pointHoverRadius: 3,
+		      pointHoverRadius: 4,
 		      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
 		      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
 		      pointHitRadius: 10,
@@ -77,12 +87,12 @@ $(function() {
 		          drawBorder: false
 		        },
 		        ticks: {
-		          maxTicksLimit: 30
+		          maxTicksLimit: maxTicksLimit
 		        }
 		      }],
 		      yAxes: [{
 		        ticks: {
-		          maxTicksLimit: 5,
+		          maxTicksLimit: 10,
 		          padding: 20,
 		          // Include a dollar sign in the ticks
 		          callback: function(value, index, values) {
